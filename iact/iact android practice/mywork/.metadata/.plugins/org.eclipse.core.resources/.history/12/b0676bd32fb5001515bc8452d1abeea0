@@ -1,0 +1,53 @@
+package com.example.gameandroidupndown;
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.View;
+
+public class MainActivity extends Activity {
+Bitmap bmp;
+float h,w,i=0,j;
+
+    public class MyAndroid extends View {
+
+		public MyAndroid(Context context) {
+			super(context);
+			DisplayMetrics displaymetrics = new DisplayMetrics();
+			getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+			 h = displaymetrics.heightPixels-90;
+			 w = displaymetrics.widthPixels-90;
+			bmp=BitmapFactory.decodeResource(getResources(),R.drawable.ic_launcher);
+			
+		}
+
+		
+		
+		
+		@Override
+		protected void onDraw(Canvas canvas) {
+			super.onDraw(canvas);
+			canvas.drawColor(Color.BLUE);
+			float ii,jj,m1,m2,m3,m4;
+			//float h=canvas.getHeight()-90;
+			//float w=canvas.getWidth()-90;
+			canvas.drawBitmap(bmp,w,h,null);
+			
+			
+		}
+
+	}
+
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(new MyAndroid(this));
+    }
+
+    
+}

@@ -1,0 +1,43 @@
+package com.example.reportcard;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class SecondActivity extends Activity implements OnClickListener{
+Button btn;
+EditText et1;
+EditText et2;
+EditText et3;
+EditText et4;
+int a,b,c,d;
+
+@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_second);
+		btn=(Button)findViewById(R.id.button1);
+		et1=(EditText)findViewById(R.id.EditText00);
+		et2=(EditText)findViewById(R.id.EditText01);
+		et3=(EditText)findViewById(R.id.EditText02);
+		et4=(EditText)findViewById(R.id.EditText03);
+		btn.setOnClickListener(this);
+		 		
+		}
+
+	@Override
+	public void onClick(View v) {
+		a=Integer.parseInt(et1.getText().toString());
+		b=Integer.parseInt(et2.getText().toString());
+		c=Integer.parseInt(et3.getText().toString());
+		d=Integer.parseInt(et4.getText().toString());
+	
+	
+	
+	}
+	
+
+}

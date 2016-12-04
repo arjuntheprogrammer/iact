@@ -1,0 +1,47 @@
+package com.example.database2;
+
+import java.util.Currency;
+
+import android.app.Activity;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+Button b1;
+EditText et1;
+TextView tv;
+SQLiteDatabase sq;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        et1=(EditText) findViewById(R.id.editText1);
+        tv=(TextView) findViewById(R.id.textView1);
+        b1=(Button) findViewById(R.id.button1);
+        sq=openOrCreateDatabase("mydb",Context.MODE_PRIVATE,null);
+        
+        b1.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+		String id=et1.getText().toString();
+		String q="select * from mytable where id='"+id+"';";
+		Cursor c=sq.rawQuery(q, null);
+		StringBuilder sb=new StringBuilder();
+		
+				
+			}
+		});
+    }
+
+
+    
+}

@@ -1,0 +1,10 @@
+
+<filter>
+<filter-name>trim2</filter-name>
+<filter-class>UpperCaseFilter</filter-class>
+</filter>
+
+<filter-mapping>
+<filter-name>trim2</filter-name>
+<servlet-name>TrimFilteredServlet</servlet-name>
+</filter-mapping>

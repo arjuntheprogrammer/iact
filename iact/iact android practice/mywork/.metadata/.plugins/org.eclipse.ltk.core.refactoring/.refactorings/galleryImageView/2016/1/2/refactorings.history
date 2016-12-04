@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 6 elements to &apos;drawable-xxhdpi&apos;&#x0D;&#x0A;- Original project: &apos;galleryImageView&apos;&#x0D;&#x0A;- Destination element: &apos;drawable-xxhdpi&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     aa&#x0D;&#x0A;     bb&#x0D;&#x0A;     cc&#x0D;&#x0A;     dd&#x0D;&#x0A;     ee&#x0D;&#x0A;     ff" description="Copy files" element1="res/drawable-hdpi/aa" element2="res/drawable-hdpi/bb" element3="res/drawable-hdpi/cc" element4="res/drawable-hdpi/dd" element5="res/drawable-hdpi/ee" element6="res/drawable-hdpi/ff" files="6" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1451890625194" target="/FragmantDemo/res/drawable-xxhdpi" units="0" version="1.0"/>
+</session>

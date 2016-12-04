@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+#s
+{
+	display:inline-block;
+	position:relative;
+	right:30px;
+}
+</style>
+<script>
+function f1()
+{
+document.getElementById("p").type="text";	
+}
+function f2()
+{
+document.getElementById("p").type="password";
+}
+</script>
+</head><body>
+<center>
+<input type="password" id="p" style="padding-right:40px;"  />
+<span id="s" >
+<input type="button" style="background-image:url(a.jpg); width:20px; height:15px;" onmousedown="f1()" onmouseup="f2()" />
+</span>
+</center>
+</body>
+</html>

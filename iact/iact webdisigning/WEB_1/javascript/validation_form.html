@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+function val()
+{
+	var name,cno,dob,f_name;
+	name=document.myform.t1.value;
+	cno=document.myform.t2.value;
+	dob=document.myform.t3.value;
+	f_name=document.myform.t4.value;
+if(name=="" && cno=="" && dob=="" && f_name=="")
+{
+alert("Please fill all fields");	
+}
+else if(name=="")
+{
+//alert("please enter your name");
+document.getElementById("s1").innerHTML="* please enter your name ";
+document.getElementById("s2").innerHTML="";      
+document.getElementById("s3").innerHTML="";
+document.getElementById("s4").innerHTML="";
+}
+else if(cno=="")
+{
+//alert("please enter your contact number");	
+document.getElementById("s2").innerHTML="* please enter your contact number ";
+document.getElementById("s1").innerHTML="";
+document.getElementById("s3").innerHTML="";
+document.getElementById("s4").innerHTML="";
+}
+else if(dob=="")
+{
+//alert("please enter your date of birth");
+document.getElementById("s3").innerHTML="* please enter your dob ";
+document.getElementById("s2").innerHTML="";
+document.getElementById("s1").innerHTML="";
+document.getElementById("s4").innerHTML="";
+}
+else if(f_name=="")
+{
+//alert("please enter your father's name");
+document.getElementById("s4").innerHTML="* please enter your father's name ";
+document.getElementById("s2").innerHTML="";
+document.getElementById("s3").innerHTML="";
+document.getElementById("s1").innerHTML="";
+}
+else
+{
+document.getElementById("s4").innerHTML="";	
+document.getElementById("s2").innerHTML="";
+document.getElementById("s3").innerHTML="";
+document.getElementById("s1").innerHTML="";
+alert("FORM SUBMITTED");
+}
+}
+</script></head><body>
+<form name="myform">
+<table border="0" align="center" width="800px">
+<tr>
+<td width="250px">
+Enter Your Name
+</td>
+<td >
+<input type="text" name="t1" />
+<span id="s1" style="color:#F00; font-family:'Comic Sans MS', cursive;"></span>
+</td>
+</tr>
+<tr>
+<td>
+Enter Your Contact Number
+</td>
+<td>
+<input type="text" name="t2" />
+<span id="s2" style="color:#F00; font-family:'Comic Sans MS', cursive;"></span>
+</td>
+</tr>
+<tr>
+<td>
+Enter DOB
+</td>
+<td>
+<input type="text" name="t3" />
+<span id="s3" style="color:#F00; font-family:'Comic Sans MS', cursive;"></span>
+</td>
+</tr>
+<tr>
+<td>
+Enter Your Father's Name
+</td>
+<td>
+<input type="text" name="t4" />
+<span id="s4" style="color:#F00; font-family:'Comic Sans MS', cursive;"></span>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="padding-left:200px;">
+<input type="button" value="SUBMIT" onclick="val()" />
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

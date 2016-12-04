@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Untitled Document</title>
+	<script src="jquery-1.11.3.min.js"></script>
+	<style type="text/css">
+		img
+		{
+			border-radius:10px;
+		}
+	</style>
+	<script>
+		var f=0;
+		function f1()
+		{
+			if(f==0)
+			{
+				$("#m1").show(1000);
+				$("#m3").show(1000);
+				$("#m5").show(1000);
+				$("#m7").show(1000);
+				$("#m2").hide(1000);
+				$("#m4").hide(1000);
+				$("#m6").hide(1000);
+				$("#m8").hide(1000);
+				f=1;
+			}
+			else if(f==1)
+			{
+				$("#m2").show(1000);
+				$("#m4").show(1000);
+				$("#m6").show(1000);
+				$("#m8").show(1000);
+				$("#m1").hide(1000);
+				$("#m3").hide(1000);
+				$("#m5").hide(1000);
+				$("#m7").hide(1000);
+				f=0;
+			}
+			setTimeout("f1()",1000);
+		}</script>
+	</head><body>
+	<input type="button" value="START" onclick="f1()" />
+	<br /><br />
+	<img src="aa.jpg" width="250px" height="250px" 
+	id="m1"/>
+	<img src="bb.jpg" width="250px" height="250px" 
+	id="m2"/>
+	<img src="c.jpg" width="250px" height="250px" 
+	id="m3"/>
+	<img src="d.jpg" width="250px" height="250px" 
+	id="m4"/>
+	<img src="e.jpg" width="250px" height="250px" 
+	id="m5"/>
+	<img src="f.jpg" width="250px" height="250px" 
+	id="m6"/>
+	<img src="g.jpg" width="250px" height="250px" 
+	id="m7"/>
+	<img src="h.jpg" width="250px" height="250px" 
+	id="m8"/>
+	<br /><br />
+</body>
+</html>

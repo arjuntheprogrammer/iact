@@ -1,0 +1,38 @@
+import java.awt.*;
+import java.awt.event.*;
+
+ class Awt extends Frame implements ActionListener{
+		TextField tf;
+
+	 Awt(){
+		 tf=new TextField();
+		 tf.setBounds(60,50,170,40);		
+		Button b=new Button("click me");
+		b.setBounds(100,120,80,30);
+		b.addActionListener(this);
+		add(b);
+		add(tf);
+		
+		setSize(300,300);
+	setLayout(null);
+	setVisible(true);
+	
+	
+	}
+	
+	 public void actionPerformed(ActionEvent e) {
+			tf.setText("welcome arjun  ...  happy coding");
+			
+		}	
+		
+		
+	public static void main(String ar[]){
+		Awt f=new Awt();
+	}
+
+
+
+
+	
+
+}

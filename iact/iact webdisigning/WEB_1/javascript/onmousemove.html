@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+function f1(event)
+{
+	var x,y,coor;
+	x=event.clientX;
+	y=event.clientY;
+	coor="Coordinates is ("+x+","+y+")";
+	document.getElementById("p1").innerHTML=coor;
+}
+function f2()
+{
+document.getElementById("p1").innerHTML="";	
+}
+</script>
+</head>
+<body style="margin:0px;">
+<div id="maindiv" style="background-color:#F00; width:1000px; height:500px;" onmousemove="f1(event)" onmouseout="f2()">
+
+</div>
+<p id="p1" style="color:#F00; font-size:50px;">
+
+</p>
+</body>
+</html>

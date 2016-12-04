@@ -1,0 +1,21 @@
+package com.example.bundledemo;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class SecondActivity extends Activity{
+Bundle b;
+TextView tv;
+String name;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_second);
+		tv=(TextView) findViewById(R.id.textView1);
+		b=getIntent().getExtras();
+		name=b.getString("key");
+		tv.setText("Your Name is :"+name);
+	}
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+ul
+{
+	margin:0px;
+	list-style:none;
+	padding:0px;
+}
+ul li
+{
+	float:left;
+	background-color:#F00;
+	width:200px;
+	height:60px;
+	line-height:60px;
+	text-align:center;
+}
+ul li a
+{
+	color:#FFF;
+	font-size:24px;
+	font-weight:bold;
+	font-style:italic;
+	text-decoration:none;
+}
+ul li ul li 
+{
+	background-color:#00F;
+	display:none;
+}
+ul li ul li a
+{
+	color:#FF0;
+	font-size:18px;
+}
+ul li ul li:hover
+{
+	background-color:#0FF;
+}
+ul li:hover
+{
+	background-color:#9F0;
+}
+</style>
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+$(document).ready(function ()
+{
+	$("li").hover(function ()
+	{
+		//$(this).find("ul>li").toggle(1000);
+		//$(this).find("ul>li").slideToggle(1000);
+		$(this).find("ul>li").stop().fadeToggle(2000);	
+	});
+});
+</script></head><body>
+<ul>
+	<li><a href="">HOME</a>
+    	<ul>
+        	<li><a href="">SUB ITEM 1</a></li>
+            <li><a href="">SUB ITEM 2</a></li>
+            <li><a href="">SUB ITEM 3</a></li>
+            <li><a href="">SUB ITEM 4</a></li>
+            <li><a href="">SUB ITEM 5</a></li>
+            <li><a href="">SUB ITEM 6</a></li>
+            <li><a href="">SUB ITEM 7</a></li>
+    	</ul>
+    </li>
+    <li><a href="">CONTACT US</a></li>
+    <li><a href="">ABOUT US</a></li>
+    <li><a href="">PORTFOLIO</a>
+        	<ul>
+        	<li><a href="">SUB ITEM 1</a></li>
+            <li><a href="">SUB ITEM 2</a></li>
+            <li><a href="">SUB ITEM 3</a></li>
+    	</ul>
+    </li>
+    <li><a href="">SERVICES</a>
+        	<ul>
+        	<li><a href="">SUB ITEM 1</a></li>
+            <li><a href="">SUB ITEM 2</a></li>
+    	</ul>
+
+    </li>
+    <li><a href="">GALLERY</a></li>
+</ul>
+</body>
+</html>
+
+
+

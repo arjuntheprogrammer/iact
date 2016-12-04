@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+#maindiv
+{
+	width:900px;
+	height:600px;
+	margin:auto;
+}
+#topdiv
+{
+	width:900px;
+	height:100px;
+}
+#middiv
+{
+	width:900px;
+	height:500px;
+}
+#leftmiddiv
+{
+	background-color:red;
+	width:300px;
+	height:500px;
+	float:left;
+}
+#midmiddiv
+{
+	background-color:#00F;
+	width:300px;
+	height:500px;
+	float:left;
+	display:none;
+}
+#rightmiddiv
+{
+	width:300px;
+	height:500px;
+	float:left;
+	display:none;
+}
+
+
+
+#l1
+{
+	width:300px;
+	height:500px;
+	float:left;
+}
+#l2
+{
+	width:300px;
+	height:500px;
+	float:left;
+}
+#l3
+{
+	width:300px;
+	height:500px;
+	float:left;
+}
+
+
+
+
+
+#maindiv #topdiv td
+{
+	padding-left:100px;
+}
+.btn
+{
+	background-image:url(b.jpg);
+	background-position:center;
+	width:100px;
+	height:50px;
+	border-radius:10px;
+	color:#FFF;
+	font-size:25px;
+	border-style:dotted;
+}
+</style>
+<script>
+function red()
+{
+document.getElementById("leftmiddiv").style.display="block";
+document.getElementById("midmiddiv").style.display="none";
+document.getElementById("rightmiddiv").style.display="none";
+}
+function blue()
+{
+document.getElementById("leftmiddiv").style.display="none";
+document.getElementById("midmiddiv").style.display="block";
+document.getElementById("rightmiddiv").style.display="none";
+}
+function image()
+{
+document.getElementById("leftmiddiv").style.display="none";
+document.getElementById("midmiddiv").style.display="none";
+document.getElementById("rightmiddiv").style.display="block";
+}
+</script>
+</head>
+
+<body>
+<div id="maindiv">
+	<div id="topdiv">
+    <table border="0" align="center" width="100%">
+    <tr>
+    <td>
+    <input type="button" value="RED" class="btn" onclick="red()" />
+    </td>
+    <td>
+    <input type="button" value="BLUE" class="btn" onclick="blue()" />
+    </td>
+    <td>
+    <input type="button" value="IMAGE" class="btn" onclick="image()" />
+    </td>
+    </tr>
+    </table>
+    </div>
+    <div id="middiv">
+    	<div id="l1">
+    	<div id="leftmiddiv">
+	        This is Left Mid Div
+        </div>
+    	</div>
+        <div id="l2">
+        <div id="midmiddiv">
+        This is Mid Mid Div
+        </div>
+        </div>
+        <div id="l3">
+        <div id="rightmiddiv">
+		<img src="a.jpg" width="300px" height="500px" />        </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

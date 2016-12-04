@@ -1,0 +1,105 @@
+#menu1, #menu1 * {
+    list-style:none;
+    border:0;
+    padding:0;
+    margin:0;
+}
+#menu1 {
+    width:173px;
+    position:relative;
+    z-index:999;
+    background:url(images/base.png) -173px 0;
+    padding-top:20px;
+}
+#menu1 ul {
+    background:url(images/base.png) 0 bottom;
+    padding-bottom:11px;
+}
+* html #menu1, * html #menu1 ul { background-image:url(images/base.gif); }
+#menu1 div {
+    width:180px;
+    position:relative;
+    background:url(images/sub.png) -180px 0;
+    padding-top:9px;
+}
+#menu1 div ul {
+    background:url(images/sub.png) 0 bottom;
+    padding-bottom:5px;
+}
+* html #menu1 div, * html #menu1 div ul { background-image:url(images/sub.gif); }
+*+html #menu1 li { border-bottom:1px solid transparent1; }
+#menu1 li div {
+    visibility:hidden;
+    position:absolute;
+    margin:-44px 0 0 -2px;
+    left:100%;
+}
+* html #menu1 li div, *+html #menu1 li div { margin-top:-42px; }
+#menu1 li:hover>div { visibility:visible; }
+* html #menu1 li { height:34px; }
+#menu1 li a {
+    display:block;
+    font-size:11px;
+    font-family:'Trebuchet MS', Arial, Verdana;
+    font-weight:bold;
+    text-decoration:none;
+    color:#fff;
+    padding-top:11px;
+    cursor:pointer;
+    position:relative;
+    z-index:9;
+}
+*+html #menu1 li a { padding-top:12px; }
+* html #menu1 li a { padding-top:10px; }
+#menu1 li.current a,
+#menu1 li a:hover { background:url(images/base-select.gif) no-repeat -163px 0; }
+#menu1 li span {
+    line-height:14px;
+    padding:0 19px 11px 17px;
+    display:block;
+}
+*+html #menu1 li span { padding-bottom:10px; }
+* html #menu1 li span {
+    height:24px;
+    padding-bottom:2px;
+}
+#menu1 li.current a span,
+#menu1 li a:hover span { background:url(images/base-select.gif) no-repeat 5px bottom; }
+#menu1 li a:hover span { color:#852a21; }
+#menu1 li a.parent1:hover span { background:url(images/base-select.gif) no-repeat -331px bottom; }
+#menu1.js-active li.current a,
+#menu1.js-active li.current a span,
+#menu1.js-active li a:hover,
+#menu1.js-active li a:hover span { background-image:url(images/pix.gif); }
+#menu1 li a.parent1 span, #menu1.js-active li a.parent1 span { background:url(images/base-select.gif) no-repeat -499px bottom; }
+#menu1 li.current li a,
+#menu1 li.current li a span { background-image:url(images/pix.gif); }
+#menu1 li li { border:0; }
+#menu1 li li a span { color:#852a21; }
+#menu1 li li a.parent1 span, #menu1.js-active li li a.parent1 span { background:url(images/sub-select.gif) no-repeat -520px bottom; }
+#menu1 li li a:hover, #menu1.js-active li li a:hover { background:url(images/sub-select.gif) no-repeat -170px 0; }
+#menu1 li li a:hover span,
+#menu1.js-active li li a:hover span {
+    background:url(images/sub-select.gif) no-repeat 5px bottom;
+    color:#fff;
+}
+#menu1 li li a.parent1:hover span, #menu1.js-active li li a.parent1:hover span { background:url(images/sub-select.gif) no-repeat -345px bottom; }
+#menu1 li.back {
+    width:170px;
+    z-index:8;
+    position:absolute;
+    background:url(images/lavalamp.gif) no-repeat 5px bottom;
+}
+#menu1 li.back .left {
+    width:170px;
+    float:none;
+    position:relative;
+    top:0;
+    left:0;
+    height:7px;
+    overflow:hidden;
+    padding:0;
+    margin:0;
+    visibility:visible;
+    background:url(images/lavalamp.gif) no-repeat -163px 0;
+} 

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;CameraApp/res/drawable-hdpi/mazda_rx_vision_concept-1920x1080.jpg&apos; to &apos;aa&apos;" description="Rename resource &apos;mazda_rx_vision_concept-1920x1080.jpg&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="res/drawable-hdpi/mazda_rx_vision_concept-1920x1080.jpg" name="aa" stamp="1451481179615" updateReferences="true"/>
+</session>

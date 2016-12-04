@@ -1,0 +1,13 @@
+Client ID	jMJLHZFu3gz3uqLza6dkB3azVfgvuvLm
+Client Secret	5a6y3bDwRf4w6J8SJDJkdUe7XuFHd9GQ
+Authorize URL	https://account.app.net/oauth/authenticate
+Access Token URL	https://account.app.net/oauth/access_token
+Callback URL	
+× http://localhost:8000
+
+
+
+token
+
+
+AQAAAAAACUi1B6aX6bKF6_c4Vxr-X5ZTSGmPtOjDNXyAIvphTM7oEpLMtdBkVUntHG1IAZbbKYNIVSzL9NY83LsMY6n7FH0eRQ

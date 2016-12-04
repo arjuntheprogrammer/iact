@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+function myFunction()
+{
+//alert("My Function");	
+var a,b,c;
+a=parseInt(document.getElementById("t1").value);
+b=parseInt(document.getElementById("t2").value);
+c=a+b;
+alert("Sum of two numbers is "+c);
+}
+</script>
+</head>
+<body>
+<table border="1" align="center">
+<tr>
+<td>
+Enter First Number
+</td>
+<td>
+<input type="text" id="t1" />
+</td>
+</tr>
+<tr>
+<td>
+Enter Second Number
+</td>
+<td>
+<input type="text" id="t2" />
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<input type="button" value="SUM" onclick="myFunction()" />
+</td>
+</tr>
+</table>
+
+</body>
+</html>
+
+
+
+
+
+

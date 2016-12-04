@@ -1,0 +1,99 @@
+package com.example.gameandroidupndown;
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.View;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+Bitmap bmp;
+float h,w,i=0,j, flag=1;
+float ii,jj,m1,m2,m3,m4;
+
+
+    public class MyAndroid extends View {
+
+		public MyAndroid(Context context) {
+			super(context);
+			DisplayMetrics displaymetrics = new DisplayMetrics();
+			getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+			 h = displaymetrics.heightPixels;
+			 w = displaymetrics.widthPixels;
+			 h-=240;
+			w-=90;
+			i=w/2;
+			j=0;
+			bmp=BitmapFactory.decodeResource(getResources(),R.drawable.ic_launcher);
+			
+		}
+
+		
+		
+		
+		@Override
+		protected void onDraw(Canvas canvas) {
+			//Toast.makeText(MainActivity.this, ""+h+" "+w,2).show();
+
+			m1=m3=(-1)*(h/w);
+			m2=m4=h/w;
+			canvas.drawColor(Color.BLUE);
+			canvas.drawBitmap(bmp,i,j,null);
+			
+			if(flag==1)	{	//Toast.makeText(MainActivity.this, "1",2).show();
+					j=m1*(i-(w/2));
+					i-=3;
+					if(i==0)
+						flag=2;
+					}		
+				
+
+				else if(flag==2)
+				{		//				Toast.makeText(MainActivity.this, "2",2).show();
+						j=(m2*i)+(h/2);
+						i+=3;
+
+						if(i==w/2)
+							flag=3;
+				}
+				
+					else if(flag==3){
+						//			Toast.makeText(MainActivity.this, "3",2).show();
+						j=(m3*(i-w))+(h/2);
+						i+=3;
+
+						if(i==w)
+							flag=4;
+				}
+
+				
+					else if(flag==4)
+					{				//		Toast.makeText(MainActivity.this, "4",2).show();
+						j=(m4*(i-w/2));
+						i-=3;
+
+						if(i==w/2)
+							flag=1;
+				}	 
+				
+			invalidate();	
+				
+			
+			
+		}
+
+	}
+
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(new MyAndroid(this));
+    }
+
+    
+}

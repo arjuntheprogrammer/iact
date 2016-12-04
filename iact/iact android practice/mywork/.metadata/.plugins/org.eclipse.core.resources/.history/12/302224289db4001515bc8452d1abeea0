@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<item android:id="@+id/m1" android:title="menu 1">
+    <menu >
+        <item android:id="@+id/sub1" android:title="sub menu 1"/>
+        <item android:id="@+id/sub2" android:title="sub menu 2"/>
+        <item android:id="@+id/sub3" android:title="sub menu 3"/>
+    </menu>
+ </item>
+ <item android:id="@+id/m2" android:title="mune 2" />
+ <item android:id="@+id/m3" android:title="mune 3" />
+ <item android:id="@+id/m4" android:title="mune 4" />
+ 
+ 
+    
+</menu>

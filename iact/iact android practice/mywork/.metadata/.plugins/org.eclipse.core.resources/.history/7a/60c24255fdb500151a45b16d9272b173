@@ -1,0 +1,33 @@
+package com.example.sliderdemo;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.MotionEvent;
+
+public class MainActivity extends Activity {
+float x1,x2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+    }
+
+
+    @Override
+    	public boolean onTouchEvent(MotionEvent event) {
+    	switch(event.getAction()){
+    	
+    	case MotionEvent.ACTION_DOWN:
+    		x1=event.getX();
+    		break;
+    	case MotionEvent.ACTION_UP:
+    		x2=event.getX();
+    		
+    	}
+    	
+    	return super.onTouchEvent(event);
+    	}
+}

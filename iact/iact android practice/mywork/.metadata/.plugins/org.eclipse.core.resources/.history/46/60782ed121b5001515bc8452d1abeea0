@@ -1,0 +1,43 @@
+package com.example.animationtextclocwiserotatecanvas;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Canvas;
+import android.view.Menu;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
+
+public class MainActivity extends Activity {
+
+    public class GraphicsView extends View {
+String s="my animation ..thsi is animation..";
+RotateAnimation ra;
+
+
+		public GraphicsView(Context context) {
+			super(context);
+			}
+		private void createAnimation(Canvas c) {
+			// TODO Auto-generated method stub
+			ra=new RotateAnimation(0,360,c.getWidth()/2,c.getHeight()/2);
+			ra.setRepeatCount(Animation.INFINITE);
+			ra.setDuration(2000L);
+			startAnimation(ra);
+			
+			
+		}
+
+	}
+
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(new GraphicsView(this));	
+        
+    }
+    
+
+    
+}

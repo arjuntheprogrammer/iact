@@ -1,0 +1,51 @@
+package com.example.sharedpreferencedemo1;
+
+import java.io.File;
+
+import android.app.Activity;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.os.Environment;
+import android.renderscript.FieldPacker;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+Button b1;
+EditText et1;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        b1=(Button) findViewById(R.id.button1);
+        et1=(EditText) findViewById(R.id.editText1);
+        b1.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+			String g=et1.getText().toString();
+			SharedPreferences sp=getSharedPreferences("FILE",MODE_PRIVATE);
+			SharedPreferences.Editor editor = sp.edit();
+			editor.putString("k","arjun");
+			editor.commit();
+			Toast.makeText(MainActivity.this, sp+"#"+editor,15).show();
+			File mypath=new File(Environment.getExternalStorageDirectory().toString());
+			
+			
+			}
+		});
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    
+}

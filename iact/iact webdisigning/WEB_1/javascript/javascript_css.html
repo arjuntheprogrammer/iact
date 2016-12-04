@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+window.onload=init;
+function init()
+{
+document.getElementById("maindiv").style.backgroundColor="red";
+document.getElementById("maindiv").style.color="white";
+document.getElementById("maindiv").style.fontFamily="'Comic Sans MS', cursive";
+document.getElementById("maindiv").innerHTML="hello world !!!";
+document.getElementById("maindiv").style.fontSize="70px";
+document.getElementById("maindiv").style.border="5px solid blue";
+document.getElementById("maindiv").onmouseover=second;
+document.getElementById("maindiv").onmouseout=init;
+}
+function second()
+{
+document.getElementById("maindiv").style.backgroundColor="green";
+document.getElementById("maindiv").style.color="white";
+document.getElementById("maindiv").style.fontFamily="Arial";
+document.getElementById("maindiv").innerHTML="Hello World !!!";
+document.getElementById("maindiv").style.fontSize="100px";
+document.getElementById("maindiv").style.border="15px solid yellow";	
+}
+function hd()
+{
+document.getElementById("maindiv").style.display="none";
+}
+function sh()
+{
+document.getElementById("maindiv").style.display="block";	
+}
+</script>
+</head><body>
+<input type="button" value="HIDE" onclick="hd()" />
+<input type="button" value="SHOW" onclick="sh()" />
+<div id="maindiv">
+
+</div>
+</body>
+</html>

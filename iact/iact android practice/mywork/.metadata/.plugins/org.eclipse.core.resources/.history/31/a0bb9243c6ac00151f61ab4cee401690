@@ -1,0 +1,26 @@
+package com.example.listviewdemo1;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.ListView;
+
+public class MainActivity extends Activity {
+ListView lv;
+String str[]={"SAVE","DELETE","UPDATE","TRANSACTION","LIST VIEW 1"
+		,"LIST VIEW 2"
+		,"LIST VIEW 3"
+		,"LIST VIEW 4"
+		,"LIST VIEW 5"
+		,"LIST VIEW 6"
+		,"LIST VIEW 7"
+		,"LIST VIEW 8"
+		,"LIST VIEW 9"
+		,"LIST VIEW 10"
+		,"LIST VIEW 11"};
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }    
+}

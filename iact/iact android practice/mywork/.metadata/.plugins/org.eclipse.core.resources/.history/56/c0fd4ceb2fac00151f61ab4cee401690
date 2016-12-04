@@ -1,0 +1,46 @@
+package com.example.reportcard;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.TextView;
+
+public class ThirdActivity extends Activity implements OnClickListener{
+
+	TextView t1;
+	TextView t2;
+	TextView t3;
+	TextView t4;
+	TextView t5;
+	TextView t6;
+	double overall, coa, ids , dbms ,oops, sum ;
+	
+	
+	
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+	setContentView(R.layout.activity_third);
+	t1=(TextView)findViewById(R.id.textView7);
+	t2=(TextView)findViewById(R.id.textView8);
+	t3=(TextView)findViewById(R.id.textView9);
+	t4=(TextView)findViewById(R.id.textView10);
+	t5=(TextView)findViewById(R.id.textView11);
+	t6=(TextView)findViewById(R.id.textView12);
+	
+	
+	
+	
+	
+	
+	}
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

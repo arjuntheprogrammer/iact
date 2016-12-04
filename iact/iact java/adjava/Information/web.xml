@@ -1,0 +1,16 @@
+<web-app>
+
+<servlet>
+<servlet-name>ms</servlet-name>
+<servlet-class>WordServlet</servlet-class>
+
+</servlet>
+<servlet-mapping>
+<servlet-name>ms</servlet-name>
+<url-pattern>/msword</url-pattern>
+
+</servlet-mapping>
+
+
+
+</web-app>

@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+$(document).ready(function ()
+{
+$("tr:odd").css("background-color","yellow");	
+$("tr:even").css("background-color","red");
+$("td").css("text-align","center");	
+$("td").css("font-size","20px");
+$("th").css("font-size","23px");
+$("table").css("border","15px solid green");
+$("td").css("border","5px solid blue");
+$("td").css("font-weight","bold");
+$("td").css("color","pink");
+$("td").css("display","none");
+$("#sh").hover(function ()
+{
+	//$("td").show(1000);
+	$("td").fadeIn(1000);
+},
+$("table").hover(function ()
+{
+//$("td").hide(1000);
+$("td").fadeOut(1000);
+}));
+//$("#m #n").css("color","red");
+$("td").hover(function ()
+{
+	$(this).css("background-color","brown");
+},
+function ()
+{
+$("tr:odd td").css("background-color","yellow");
+$("tr:even td").css("background-color","red");
+});
+});
+</script>
+</head><body>
+<table border="1" align="center" width="100%">
+<tr>
+<th id="sh">
+Employee ID
+</th>
+<th>
+Employee Name
+</th>
+<th>
+Employee Contact Number
+</th>
+<th>
+Employee Department Number
+</th>
+<th>
+Employee Salary
+</th>
+<th>
+Employee Email-ID
+</th>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+AMIT
+</td>
+<td>
+231343245
+</td>
+<td>
+M-111
+</td>
+<td>
+564212
+</td>
+<td>
+iactmzn@gmail.com
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+AMIT
+</td>
+<td>
+231343245
+</td>
+<td>
+M-111
+</td>
+<td>
+564212
+</td>
+<td>
+iactmzn@gmail.com
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+AMIT
+</td>
+<td>
+231343245
+</td>
+<td>
+M-111
+</td>
+<td>
+564212
+</td>
+<td>
+iactmzn@gmail.com
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+AMIT
+</td>
+<td>
+231343245
+</td>
+<td>
+M-111
+</td>
+<td>
+564212
+</td>
+<td>
+iactmzn@gmail.com
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+AMIT
+</td>
+<td>
+231343245
+</td>
+<td>
+M-111
+</td>
+<td>
+564212
+</td>
+<td>
+iactmzn@gmail.com
+</td>
+</tr>
+<tr>
+<td>
+101
+</td>
+<td>
+AMIT
+</td>
+<td>
+231343245
+</td>
+<td>
+M-111
+</td>
+<td>
+564212
+</td>
+<td>
+iactmzn@gmail.com
+</td>
+</tr>
+
+</table>
+
+
+
+
+<div id="m">
+<div id="n">
+This is N DIV
+</div>
+</div>
+
+
+
+
+</body>
+</html>

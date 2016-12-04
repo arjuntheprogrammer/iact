@@ -1,0 +1,24 @@
+package com.example.sensorchangecolor;
+
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.RelativeLayout;
+
+public class MainActivity extends Activity {
+SensorManager sm;
+Sensor sen;
+boolean color=false;
+long lastUpdate;
+RelativeLayout rl;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+    }
+    
+}

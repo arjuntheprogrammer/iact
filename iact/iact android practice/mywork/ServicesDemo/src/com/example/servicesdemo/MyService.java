@@ -1,0 +1,40 @@
+package com.example.servicesdemo;
+
+import android.app.Service;
+import android.content.Intent;
+import android.media.MediaPlayer;
+import android.os.IBinder;
+import android.widget.Toast;
+
+public class MyService extends Service{
+MediaPlayer mp;
+	@Override
+	public IBinder onBind(Intent intent) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void onCreate() {
+		// TODO Auto-generated method stub
+		super.onCreate();
+		Toast.makeText(getApplicationContext(), "SERVICE CREATED", 1).show();
+		mp=MediaPlayer.create(getApplicationContext(), R.raw.aa);
+		mp.setLooping(false);
+	}
+
+	@Override
+	public void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		mp.stop();
+	}
+
+	@Override
+	public void onStart(Intent intent, int startId) {
+		// TODO Auto-generated method stub
+		super.onStart(intent, startId);
+		mp.start();
+	}
+
+}

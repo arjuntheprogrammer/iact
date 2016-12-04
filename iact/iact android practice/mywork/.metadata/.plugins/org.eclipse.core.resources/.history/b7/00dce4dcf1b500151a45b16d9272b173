@@ -1,0 +1,33 @@
+package com.example.vibratordemo;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.os.Vibrator;
+import android.view.Menu;
+import android.widget.Button;
+
+public class MainActivity extends Activity {
+Vibrator v;
+Button btn1, btn2;
+int vibrate=30;
+int interval=1000;
+int dot=1, shortgap=1;
+long a[]={0, vibrate, interval, dot, shortgap};
+@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        btn1=(Button) findViewById(R.id.button1);
+		btn2=(Button) findViewById(R.id.button2);
+		v=(Vibrator) getSystemService
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    
+}

@@ -1,0 +1,32 @@
+package com.example.sensorchangecolor;
+
+import android.graphics.Color;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
+import android.os.Bundle;
+import android.widget.RelativeLayout;
+
+import com.example.sensorchangecolor.MainActivity.SensorEventListenerextends;
+
+public class MainActivity implements SensorEventListenerextends Activity public interface SensorEventListenerextends {
+
+	}
+{
+SensorManager sm;
+Sensor sen;
+boolean color=false;
+long lastUpdate;
+RelativeLayout rl;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        sm=(SensorManager) getSystemService(SENSOR_SERVICE);
+        rl=(RelativeLayout) findViewById(R.id.r1);
+    rl.setBackgroundColor(Color.RED);
+    lastUpdate=System.currentTimeMillis();
+    
+    }
+    
+}

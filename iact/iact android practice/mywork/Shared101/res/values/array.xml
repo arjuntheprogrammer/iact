@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="list_options">
+        <item>HINDI</item>
+        <item>ENGLISH</item>
+        <item>FRENCH</item>
+        <item>OTHER</item>
+    </string-array>
+    <string-array name="list_values">
+        <item >HINDI LANGUAGE</item>
+        <item >ENGLISH LANGUAGE</item>
+        <item >FRENCH LANGUAGE</item>
+        <item >OTHER LANGUAGE</item>
+    </string-array>
+</resources>

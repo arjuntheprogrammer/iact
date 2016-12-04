@@ -1,0 +1,115 @@
+package com.example.contats;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.Toast;
+
+public class SecondActivity extends Activity implements OnItemClickListener, OnClickListener{
+ListView lv;
+Button b1,b2;
+Bundle b;
+
+
+String name[]=new String[100];
+//{	"a", "b" , "c" ,"d" ,"e"};
+String number[]=new String[100];
+//{	"123", "234" , "345" ,"456" ,"567"};
+ArrayAdapter<String> aa;
+
+
+
+
+@Override
+	protected void onCreate(Bundle savedInstanceState) {
+
+		b=getIntent().getExtras();
+		for(int i=0;i<b.getInt("length");i++){
+			String x="name";
+			String xx="number";
+			x=x+i;
+			xx=x+i;
+			//Toast.makeText(this, ""+b.getString("x"), 1).show();
+			name[i]=b.getString("x");
+			number[i]=b.getString("xx");
+		}
+	
+	
+	
+	
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_second);
+	b1=(Button) findViewById(R.id.button1);
+	b2=(Button) findViewById(R.id.button2);
+	b1.setOnClickListener(this);
+	b2.setOnClickListener(this);
+	
+	lv=(ListView)findViewById(R.id.listView1);
+		aa=new ArrayAdapter<String>(SecondActivity.this, android.R.layout.simple_list_item_1,name);
+		lv.setAdapter(aa);
+		lv.setOnItemClickListener(this);
+		
+		
+		
+		
+	}
+	@Override
+	public void onClick(View aa) {
+		
+		if(aa.getId()==R.id.button1){
+		Intent i=new Intent(SecondActivity.this, FourthActivity.class);
+		startActivity(i);
+			
+			}
+		
+		if(aa.getId()==R.id.button2){
+			Intent i=new Intent(SecondActivity.this, FourthActivity.class);
+			startActivity(i);
+				
+		}
+		
+		
+	}
+
+	@Override
+	public void onItemClick(AdapterView<?> arg0, View arg1, int index, long arg3) {
+		//Toast.makeText(this, ""+name[index], 1).show();
+		Object o=lv.getItemAtPosition(index);
+		Intent ii=new Intent(SecondActivity.this, ThirdActivity.class);
+		
+		
+		for(int i=0;i<b.getInt("length");i++)
+		{
+			String x="number";
+			String xx="name";
+			
+			x=x+i;
+			xx=xx+i;
+			//Toast.makeText(this, ""+xx, 1).show();
+			ii.putExtra(x, number[i]);
+			ii.putExtra(xx, name[i]);
+			
+		}
+
+		for(int i=0;i<b.getInt("length");i++)
+			if(o.equals(name[i])){
+				ii.putExtra("name", name[i]);
+				ii.putExtra("number", number[i]);
+				ii.putExtra("length", name.length);
+				ii.putExtra("index", index);
+			startActivity(ii);
+			
+			
+		}
+		
+	}
+	
+
+}

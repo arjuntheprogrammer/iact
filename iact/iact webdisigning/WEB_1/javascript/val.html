@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script>
+function validation()
+{
+var roll,sname,dd,mm,yy;
+roll=document.ff.roll.value;
+sname=document.ff.sname.value;
+dd=document.ff.dd.value;
+mm=document.ff.mm.value;
+yy=document.ff.yy.value;
+//alert(dd);
+if(roll=="" && sname=="" && dd=="d1" && mm=="m1" && yy=="y1")
+{
+	alert("please fill all fields");
+}
+else if(roll=="")
+{
+document.getElementById("a1").innerHTML="* Roll number";
+document.getElementById("a2").innerHTML="";
+document.getElementById("a3").innerHTML="";
+}
+else if(sname=="")
+{
+document.getElementById("a2").innerHTML="* Student Name";	
+document.getElementById("a1").innerHTML="";
+document.getElementById("a3").innerHTML="";
+}
+else if(dd=="d1")
+{
+document.getElementById("a3").innerHTML="* Select Day";
+document.getElementById("a2").innerHTML="";
+document.getElementById("a1").innerHTML="";
+}
+else if(mm=="m1")
+{
+document.getElementById("a3").innerHTML="* Select Month";
+document.getElementById("a2").innerHTML="";
+document.getElementById("a1").innerHTML="";
+}
+else if(yy=="y1")
+{
+document.getElementById("a3").innerHTML="* Select Year";
+document.getElementById("a2").innerHTML="";
+document.getElementById("a1").innerHTML="";
+}
+else
+{
+	document.getElementById("a2").innerHTML="";
+document.getElementById("a1").innerHTML="";
+document.getElementById("a3").innerHTML="";
+alert("FORM SUBMITTED");	
+}
+}
+</script>
+<style type="text/css">
+#a1
+{
+	color:#F00;
+	font-family:"Comic Sans MS", cursive;
+	font-weight:bold;
+}
+#a2
+{
+	color:#F00;
+	font-family:"Comic Sans MS", cursive;
+	font-weight:bold;
+}
+#a3
+{
+	color:#F00;
+	font-family:"Comic Sans MS", cursive;
+	font-weight:bold;
+}
+
+</style>
+</head><body>
+<form name="ff">
+<table border="0" align="center" width="600px">
+<tr>
+<td width="200px">
+Enter Student Roll Number
+</td>
+<td>
+<input type="text" name="roll" />
+<span id="a1"></span>
+</td>
+</tr>
+<tr>
+<td>
+Enter Student Name
+</td>
+<td>
+<input type="text" name="sname" />
+<span id="a2"></span>
+</td>
+</tr>
+<tr>
+<td>
+Enter Student DOB
+</td>
+<td>
+<select name="dd">
+<option value="d1">DAY</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+</select>
+<select name="mm">
+<option value="m1">MONTH</option>
+<option>JAN</option>
+<option>FEB</option>
+<option>MARCH</option>
+</select>
+<select name="yy">
+<option value="y1">YEAR</option>
+<option>2011</option>
+<option>2012</option>
+<option>2013</option>
+</select>
+<span id="a3"></span>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<input type="button" value="SUBMIT" onclick="validation()" />
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
